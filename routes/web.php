@@ -25,4 +25,3 @@ Auth::routes();
 
 //Route::resource('receptionist', 'ReceptionistController');
 
-Route::get('receptionist', [ReceptionistController::class, 'index']);

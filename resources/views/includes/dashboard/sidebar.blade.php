@@ -40,10 +40,10 @@
                 @endif
                 
                 <li class="nav-item">
-                                <a class="nav-link">
+                                <a class="nav-link" href="{{ route('dashboard.receptionists.index') }}">
                                     <i class="nav-icon fas fa-th"></i> <p>Create  Receptionists</p>
                                 </a>
-                            </li>
+                </li>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

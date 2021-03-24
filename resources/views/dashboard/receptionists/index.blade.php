@@ -4,7 +4,7 @@
 
 <div class="card">
     <div class="card-header">
-        <h3 class="card-title pt-2"> Receptionist : {{ $count }} </h3>
+{{--        <h3 class="card-title pt-2"> Receptionist : {{ $count }} </h3>--}}
 
        <!-- @if (auth()->user()->hasRole('admin'))-->
         <div class="card-tools">
@@ -37,7 +37,7 @@
                         <span class="input-group-text"><i class="fas fa-search"></i></span>
                     </div>
                     <input type="text" class="form-control" placeholder="Search..." name="search"
-                     value="{{ request()->search }}">-->
+                     value="{{ request()->search }}">
                     <div class="input-group-prepend">
                         <button type="submit" class="btn btn-primary">
                             <i class="fas fa-search"></i> Search
@@ -61,42 +61,42 @@
                     <th>Action</th>
                 </tr>
             </thead>
-            <tbody>
-                @forelse($receptionists as $receptionist)
-                <tr>
-                    <td> {{ $receptionist->id }} </td>
-                    <td> <img class="img-fluid" src="{{ $receptionist->image_path }}" width="70">
-                    </td>
-                    <td> {{ $receptionist->name }} </td>
-                    <td> {{ $receptionist->email }} </td>
-                    <td> {{ $receptionist->phone }} </td>
-                    <td> {{ $receptionist->receptionist->name }} </td>
-                    <td class="project-actions text-right">
-                        <a class="btn btn-primary btn-sm" href="{{ route('dashboard.receptionists.edit', $receptionist) }}">
-                            <i class="fas fa-folder"> </i> View
-                        </a>
-                        <a href="{{ route('dashboard.receptionists.edit', $receptionist) }}" class="btn btn-info btn-sm">
-                            <i class="fas fa-pencil-alt"> </i> Edit
-                        </a>
+{{--            <tbody>--}}
+{{--                @forelse($receptionists ?? '' as $receptionist)--}}
+{{--                <tr>--}}
+{{--                    <td> {{ $receptionist->id }} </td>--}}
+{{--                    <td> <img class="img-fluid" src="{{ $receptionist->image_path }}" width="70">--}}
+{{--                    </td>--}}
+{{--                    <td> {{ $receptionist->name }} </td>--}}
+{{--                    <td> {{ $receptionist->email }} </td>--}}
+{{--                    <td> {{ $receptionist->phone }} </td>--}}
+{{--                    <td> {{ $receptionist->receptionist->name }} </td>--}}
+{{--                    <td class="project-actions text-right">--}}
+{{--                        <a class="btn btn-primary btn-sm" href="{{ route('dashboard.receptionists.edit', $receptionist) }}">--}}
+{{--                            <i class="fas fa-folder"> </i> View--}}
+{{--                        </a>--}}
+{{--                        <a href="{{ route('dashboard.receptionists.edit', $receptionist) }}" class="btn btn-info btn-sm">--}}
+{{--                            <i class="fas fa-pencil-alt"> </i> Edit--}}
+{{--                        </a>--}}
 
-                        <form action="{{ route('dashboard.receptionists.destroy', $receptionist) }}" method="post"
-                            style="display: inline-block;" onclick="return confirm('Are you sure to delete employee?')">
-                            {{ csrf_field() }}
-                            {{ method_field('delete') }}
-                            <button type="submit" class="btn btn-danger delete btn-sm"><i class="fa fa-trash"></i>
-                                Delete</button>
-                        </form><!-- end of form -->
-                    </td>
-                </tr>
+{{--                        <form action="{{ route('dashboard.receptionists.destroy', $receptionist) }}" method="post"--}}
+{{--                            style="display: inline-block;" onclick="return confirm('Are you sure to delete employee?')">--}}
+{{--                            {{ csrf_field() }}--}}
+{{--                            {{ method_field('delete') }}--}}
+{{--                            <button type="submit" class="btn btn-danger delete btn-sm"><i class="fa fa-trash"></i>--}}
+{{--                                Delete</button>--}}
+{{--                        </form><!-- end of form -->--}}
+{{--                    </td>--}}
+{{--                </tr>--}}
 
-                @empty
-                <tr>
-                    <td colspan="6"> No Records </td>
-                </tr>
-                @endforelse
-            </tbody>
+{{--                @empty--}}
+{{--                <tr>--}}
+{{--                    <td colspan="6"> No Records </td>--}}
+{{--                </tr>--}}
+{{--                @endforelse--}}
+{{--            </tbody>--}}
         </table>
-        {{ $receptionists->appends(request()->query())->links() }}
+{{--        //{{ $receptionists ?? ''->appends(request()->query())->links() }}--}}
     </div>
 
     <!-- /.card-body -->

@@ -7,7 +7,7 @@
     <div class="col-md-8">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title pt-2">Create New Manager</h3>
+                <h3 class="card-title pt-2">Create New employee</h3>
 
                 <div class="card-tools">
                     <a href="{{ route('dashboard.receptionists.index') }}" type="button" class="btn btn-default bg-primary">

@@ -19,7 +19,10 @@ return [
         ],
         'manager' => [
             'profile' => 'r,u',
-        ]
+        ],
+        'normal' => [
+            'profile' => 'r,u',
+        ],
     ],
 
     'permissions_map' => [

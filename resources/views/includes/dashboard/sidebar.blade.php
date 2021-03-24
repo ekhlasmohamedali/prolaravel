@@ -21,7 +21,7 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
-                        @if (auth()->user()->hasRole('admpin'))
+                        @if (auth()->user()->hasRole('admin'))
                             <li class="nav-item">
                                 <a href="{{ route('dashboard.admins.index') }}" class="nav-link">
                                     <i class="nav-icon fas fa-th"></i> <p>Create  Manger</p>
@@ -38,12 +38,12 @@
                     </a>
                 </li>
                 @endif
-                
+
                 <li class="nav-item">
-                                <a class="nav-link">
+                                <a class="nav-link" href="{{ route('dashboard.receptionists.index') }}">
                                     <i class="nav-icon fas fa-th"></i> <p>Create  Receptionists</p>
                                 </a>
-                            </li>
+                </li>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

@@ -24,6 +24,9 @@ Route::middleware(['auth:admin'])->prefix('dashboard')->as('dashboard.')->group(
     Route::resource('admins', 'AdminsController')->middleware('role:admin');
 
     Route::resource('users', 'UsersController');
-
     Route::get('users/{user}/approve', 'UsersController@approve')->name('users.approve');
+
+    Route::resource('receptionists', 'ReceptionistController');
+
+
 });
